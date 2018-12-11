@@ -1,0 +1,116 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+    padding: 80px;
+    text-align: center;
+    color: white;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background: #1abc9c;
+
+    .index & {
+      background:red;
+    }
+    .about & {
+      background:blue;
+    }
+    .contact & {
+      background:orange;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+}
+
+
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+
+  a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    
+    @media screen and (max-width: 400px) {
+        float: none;
+        width: 100%;
+    }
+
+    &.right {
+      float: right;
+    }
+    &:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    &.active {
+      background-color: #666;
+      color: white;
+    }
+  }
+
+}
+
+
+.container {
+  max-width:960px;
+  margin: 0 auto;
+}
+
+/* Column container */
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 700px) {
+  flex-direction: column;
+  }
+
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
