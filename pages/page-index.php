@@ -1,3 +1,5 @@
+<?php $sidebar = 'sidebar.php' ?>
+
 <h2>INDEX</h2>
 <h3>What is this?</h3>
 

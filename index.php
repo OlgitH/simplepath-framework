@@ -1,5 +1,5 @@
 <?php
-require 'variables.php';
+require 'partials/variables.php';
 
 if ($page == ''){
   $page = 'index';
@@ -11,7 +11,8 @@ $GLOBALS['page'] = $page; //make the variable available elsewhere on the site. J
 $pages = array(
     'index',
     'about',
-    'contact'
+    'contact',
+    'ridiculously-named-page'
   );
 
 if (in_array($page, $pages)) {

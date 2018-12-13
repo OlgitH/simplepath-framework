@@ -1,3 +1,5 @@
+<?php $nosidebar = true ?>
+
 <h2>ABOUT</h2>
 <h3>Why use Simple Path framework?</h3>
 <p>
