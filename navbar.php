@@ -1,3 +1,5 @@
+<?php $webroot = $GLOBALS['webroot'] ?>
+
 <div class="navbar">
   <a href="/">Home</a>
   <a href="/about">About</a>

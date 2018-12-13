@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include_once 'head.php'; ?> <!-- get the head section-->
+<?php require 'head.php'; ?> <!-- get the head section-->
 
     <body class="<?php echo $page ?>"> <!-- assign the body class based on the URL last section e.g about-->
 
 
-    <?php include_once 'navbar.php'; ?> <!-- get the navbar-->
-    <?php include_once 'header.php'; ?> <!-- get the page header (where the image is) -->
+    <?php require 'navbar.php'; ?> <!-- get the navbar-->
+    <?php require 'header.php'; ?> <!-- get the page header (where the image is) -->
 
         <div class="row">
           <div class="side">
@@ -18,26 +18,26 @@
 
                   //Multiple sidebars
                   if ($page == 'about'){
-                    include_once 'sidebars/sidebar-about.php';
+                    require 'sidebars/sidebar-about.php';
                   } elseif ($page == 'contact') {
-                    include_once 'sidebars/sidebar-contact.php';
+                    require 'sidebars/sidebar-contact.php';
                   } else {
-                    include_once 'sidebars/sidebar.php';
+                    require 'sidebars/sidebar.php';
                   }
 
                   // Single sidebar
-                  // include_once 'sidebar.php';
+                  // require 'sidebar.php';
               ?>
           </div>
 
           <div class="main">
-            <?php include_once 'pages/page-' . $page . '.php'; ?>
+            <?php require 'pages/page-' . $page . '.php'; ?>
           </div>
 
 
     </div>
-    <?php include_once 'footer.php'; ?>
+    <?php require 'footer.php'; ?>
     </body>
-    
+
 
 </html>

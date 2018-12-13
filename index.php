@@ -1,9 +1,9 @@
 <?php
+require 'variables.php';
 
-$link = $_SERVER['PHP_SELF'];
-$link_array = explode('/',$link);
-$page = end($link_array);
-$page = str_replace('.php','',$page);
+if ($page == ''){
+  $page = 'index';
+}
 
 $GLOBALS['page'] = $page; //make the variable available elsewhere on the site. Just call $GLOBALS['page']
 
@@ -15,9 +15,9 @@ $pages = array(
   );
 
 if (in_array($page, $pages)) {
-    include_once 'layout.php';
+    require 'layout.php';
 } else {
-    include_once '404.php';
+    require '404.php';
 }
 
 ?>
